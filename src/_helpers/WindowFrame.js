@@ -8,8 +8,8 @@ const Container = styled.div`
   background-color: ${Color.primaryColor};
 `
 
-const WindowFrame = () =>
-  <Container>
-  </Container>
+const WindowFrame = children =>
+<Container>
+</Container>  
 
 export default WindowFrame

@@ -1,12 +1,25 @@
 import React from 'react';
-import { SlideHandler, WindowFrame } from './_helpers'
+import SlideHandler from './_helpers/SlideHandler'
+import EventHandler from './_helpers/EventHandler'
 
 class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      currentSlide: 1,
+    }
+  }
+
+  _handleSlideChange = () => {
+
+  }
+
   render() {
     return (
-      <WindowFrame>
-        <SlideHandler />
-      </WindowFrame>
+      <div>
+        <SlideHandler slide={"slide2"}/>
+        <EventHandler />
+      </div>
     );
   }
 }
