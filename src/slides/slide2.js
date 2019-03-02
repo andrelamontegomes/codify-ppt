@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Slide1 extends React.Component {
+class Slide2 extends React.Component {
   render() {
     return (
       <div> First slide </div>
@@ -8,4 +8,4 @@ class Slide1 extends React.Component {
   }
 }
 
-export default Slide1;
+export default Slide2;

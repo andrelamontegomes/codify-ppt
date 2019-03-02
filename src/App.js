@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { SlideHandler, WindowFrame } from './_helpers'
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        
-      </div>
+      <WindowFrame>
+        <SlideHandler />
+      </WindowFrame>
     );
   }
 }
