@@ -5,11 +5,18 @@ import { Color } from '../theme'
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${Color.primaryColor};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  background-color: ${Color.black};
+  color: ${Color.white}
 `
 
-const WindowFrame = children =>
+const WindowFrame = ({children}) =>
 <Container>
-</Container>  
+  { children }
+</Container>
 
 export default WindowFrame

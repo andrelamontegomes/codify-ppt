@@ -3,7 +3,9 @@ import React from 'react';
 class Slide2 extends React.Component {
   render() {
     return (
-      <div> Here is the next slide</div>
+      <div>
+        <h3>A project to make more simple dynamic online powerpoints</h3>
+      </div>
     );
   }
 }

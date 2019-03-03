@@ -3,7 +3,9 @@ import React from 'react';
 class Slide1 extends React.Component {
   render() {
     return (
-      <div> This is the title slide </div>
+      <div>
+        <h1>Codify - Powerpoint</h1>
+      </div>
     );
   }
 }

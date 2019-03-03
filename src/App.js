@@ -1,4 +1,5 @@
 import React from 'react';
+import WindowFrame from './_helpers/WindowFrame'
 import SlideHandler from './_helpers/SlideHandler'
 import EventHandler from './_helpers/EventHandler'
 
@@ -25,10 +26,10 @@ class App extends React.Component {
     const { currentSlide } = this.state
     const slide = `slide${currentSlide}`
     return (
-      <div>
+      <WindowFrame>
         <SlideHandler slide={slide}/>
         <EventHandler slideChange={this._handleSlideChange}/>
-      </div>
+      </WindowFrame>
     );
   }
 }
