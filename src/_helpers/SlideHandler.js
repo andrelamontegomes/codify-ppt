@@ -9,7 +9,8 @@ export default class SlideHandler extends React.Component {
   }
 
   render() {
-    const Slide = this.components[this.props.slide || "slide1" ]
+    const { slide } = this.props
+    const Slide = this.components[slide || "slide1" ]
     return <Slide />
   }
 }
