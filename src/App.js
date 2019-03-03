@@ -10,15 +10,15 @@ class App extends React.Component {
     }
   }
 
-  _handleSlideChange = () => {
-
+  _handleSlideChange = evt => {
+    console.log(evt.keyCode)
   }
 
   render() {
     return (
       <div>
         <SlideHandler slide={"slide2"}/>
-        <EventHandler />
+        <EventHandler slideChange={this._handleSlideChange}/>
       </div>
     );
   }

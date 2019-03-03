@@ -1,8 +1,19 @@
 import React from 'react'
 
-export default class EventHandler extends React.Component {
-
-  render() {
-    return <div></div>
+// left arrow = 37
+// up arrow = 38
+// right arrow = 39
+// down arrow = 40
+class EventHandler extends React.Component {
+  componentDidMount(){
+    document.addEventListener('keydown', this.props.slideChange);
   }
+
+  componentWillUnmount(){
+    document.removeEventListener('keydown', this.props.slideChange);
+  }
+
+  render() { return <div></div> }
 }
+
+export default EventHandler
