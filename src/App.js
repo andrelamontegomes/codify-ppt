@@ -4,19 +4,21 @@ import SlideHandler from './_helpers/SlideHandler'
 import EventHandler from './_helpers/EventHandler'
 
 class App extends React.Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+    this.backNavigation = this.props.backKeyCode || 37
+    this.forwardNavigation = this.props.forwardKeyCode || 39
     this.state = {
-      currentSlide: 1,
+      currentSlide: 0,
     }
   }
 
   _handleSlideChange = evt => {
     const { currentSlide } = this.state
     const keyCode = evt.keyCode
-    if(keyCode === 39) {
+    if(keyCode === this.forwardNavigation) {
       this.setState({ currentSlide: currentSlide + 1})
-    } else if (keyCode === 37 && currentSlide > 1 ){
+    } else if (keyCode === this.backNavigation && currentSlide > 1 ){
       this.setState({ currentSlide: currentSlide - 1})
     }
     else {}
@@ -24,10 +26,9 @@ class App extends React.Component {
 
   render() {
     const { currentSlide } = this.state
-    const slide = `slide${currentSlide}`
     return (
       <WindowFrame>
-        <SlideHandler slide={slide}/>
+        <SlideHandler slide={currentSlide}/>
         <EventHandler slideChange={this._handleSlideChange}/>
       </WindowFrame>
     );
